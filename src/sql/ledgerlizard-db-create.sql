@@ -18,3 +18,15 @@ BEGIN
 		, [password] VARCHAR(500) -- We will salt and encrypt this eventually, for now do not store any valuable password here
 	)
 END
+
+IF (NOT EXISTS (SELECT * FROM [ledgerlizard].[identity].[user] WHERE [username] = 'dummy-test-user'))
+BEGIN
+    INSERT INTO [ledgerlizard].[identity].[user] (
+        [username]
+        , [password]
+    )
+    VALUES (
+        'dummy-test-user'
+        , 'dummy'
+    )
+END
