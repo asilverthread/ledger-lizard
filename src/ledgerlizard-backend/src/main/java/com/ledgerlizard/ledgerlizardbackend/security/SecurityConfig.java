@@ -35,7 +35,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static final RequestMatcher PROTECTED_URLS = new NegatedRequestMatcher(PUBLIC_URLS);
 
-    @Autowired
     TokenAuthenticationProvider provider;
 
     SecurityConfig(final TokenAuthenticationProvider provider) {

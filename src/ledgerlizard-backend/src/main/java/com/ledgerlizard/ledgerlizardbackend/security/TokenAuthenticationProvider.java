@@ -1,5 +1,6 @@
 package com.ledgerlizard.ledgerlizardbackend.security;
 
+import lombok.NonNull;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider;
 import org.springframework.security.core.AuthenticationException;
@@ -11,7 +12,8 @@ import java.util.Optional;
 
 
 @Component
-final class TokenAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
+public final class TokenAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
+    @NonNull
     UserAuthenticationService auth;
 
     @Override
