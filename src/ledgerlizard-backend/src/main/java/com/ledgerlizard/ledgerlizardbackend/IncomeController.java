@@ -1,6 +1,6 @@
 package com.ledgerlizard.ledgerlizardbackend;
 
-import com.ledgerlizard.ledgerlizardbackend.data.Income;
+import com.ledgerlizard.ledgerlizardbackend.data.IncomeEntity;
 import com.ledgerlizard.ledgerlizardbackend.service.IncomeService;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,17 +22,17 @@ public class IncomeController {
     }*/
 
     @GetMapping("/{id}")
-    public Income findById(@PathVariable String id) {
+    public IncomeEntity findById(@PathVariable String id) {
         return incomeService.findById(id);
     }
 
     @PostMapping
-    public Income create(@RequestBody Income income) {
+    public IncomeEntity create(@RequestBody IncomeEntity income) {
         return incomeService.save(income);
     }
 
     @PutMapping("/{id}")
-    public Income update(@RequestBody Income income) {
+    public IncomeEntity update(@RequestBody IncomeEntity income) {
         return incomeService.save(income);
     }
 
