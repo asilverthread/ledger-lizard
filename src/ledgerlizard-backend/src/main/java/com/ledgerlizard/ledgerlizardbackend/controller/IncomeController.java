@@ -1,4 +1,4 @@
-package com.ledgerlizard.ledgerlizardbackend;
+package com.ledgerlizard.ledgerlizardbackend.controller;
 
 import com.ledgerlizard.ledgerlizardbackend.data.IncomeEntity;
 import com.ledgerlizard.ledgerlizardbackend.service.IncomeService;
@@ -16,10 +16,10 @@ public class IncomeController {
         return "hello world";
     }
 
-    /*@GetMapping
-    public List<Income> findAll() {
+    @GetMapping("/all")
+    public List<IncomeEntity> findAll() {
         return incomeService.findAll();
-    }*/
+    }
 
     @GetMapping("/{id}")
     public IncomeEntity findById(@PathVariable String id) {

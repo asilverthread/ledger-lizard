@@ -1,6 +1,7 @@
 package com.ledgerlizard.ledgerlizardbackend.data;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Objects;
 
@@ -9,7 +10,7 @@ import java.util.Objects;
 public class BillEntity {
     private int billId;
     private String description;
-    private Long amount;
+    private BigDecimal amount;
     private Integer dueday;
     private Date startdate;
     private Date enddate;
@@ -38,11 +39,11 @@ public class BillEntity {
 
     @Basic
     @Column(name = "amount")
-    public Long getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(Long amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 

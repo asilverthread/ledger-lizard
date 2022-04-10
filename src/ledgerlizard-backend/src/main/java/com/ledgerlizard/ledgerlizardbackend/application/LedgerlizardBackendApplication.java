@@ -1,4 +1,4 @@
-package com.ledgerlizard.ledgerlizardbackend;
+package com.ledgerlizard.ledgerlizardbackend.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
